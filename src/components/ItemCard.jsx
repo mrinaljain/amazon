@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch } from "react-redux";
 import { addItem } from '../utils/slices/cartSlice';
+
 const ItemCard = function (props) {
    const { id, title, description, price, stock, rating, reviews, images: [firstImage] } = props;
    const dispatch = useDispatch();
@@ -8,7 +9,8 @@ const ItemCard = function (props) {
       dispatch(addItem(item));
    }
    const imageStyle = {
-      width: 200
+      width: 200,
+
    }
    return (
       <div className="w-80 rounded-lg shadow-md border p-4 bg-white">
